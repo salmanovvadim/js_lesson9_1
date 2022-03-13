@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html lang="ru">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Страница, к которой подключен jQuery</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+      <script>
+        $(document).ready(function () {
+          $('#button1').click(function () {
+            $('.footerContent:even').hide();
+          });
+          $('#button2').click(function () {
+            $('.footerContent:even').show();
+          });
+        });
+      </script>
+    </head>
+    
+    <body>
+      <button id="button1">Спрятать нечетные элементы с классом footerContent</button>
+      <button id="button2">Показать нечетные элементы с классом footerContent</button>
+      <h2>Это заголовок 2 уровня!</h2>
+      <p class="footerContent">Это нечетный элемент!</p>
+      <p class="footerContent">А это четный элемент!</p>
+    </body>
+  </html>
